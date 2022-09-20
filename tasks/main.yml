@@ -1,0 +1,14 @@
+---
+- name: start netbootxyz docker container
+  community.docker.docker_container:
+    name: netbootxyz
+    image: linuxserver/netbootxyz
+    state: present
+    restart_policy: unless-stopped
+    ports:
+      - 69:69/udp
+      - 3000:3000
+      - 8080:80
+    volumes:
+      - /opt/netbootxyz/config:/config
+      - /opt/netbootxyz/assets:/assets

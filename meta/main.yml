@@ -1,0 +1,44 @@
+---
+galaxy_info:
+  author: itapai
+  description: netbootxyz server
+  role_name: netbootxyz
+
+  license: MIT
+
+  min_ansible_version: '3.0'
+
+  platforms:
+    - name: GenericUNIX
+      versions:
+        - all
+    - name: GenericBSD
+      versions:
+        - all
+    - name: GenericLinux
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: opensuse
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: ArchLinux
+      versions:
+        - all
+
+  galaxy_tags:
+    - netbootxyz
+    - netboot
+    - tftp
+
+dependencies: []
+collections:
+  - community.docker
