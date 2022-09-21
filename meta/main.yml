@@ -3,34 +3,23 @@ galaxy_info:
   author: itapai
   description: netbootxyz server
   role_name: netbootxyz
+  standalone: true
 
   license: MIT
 
-  min_ansible_version: '3.0'
+  min_ansible_version: '2.4'
 
   platforms:
-    - name: GenericUNIX
-      versions:
-        - all
-    - name: GenericBSD
-      versions:
-        - all
-    - name: GenericLinux
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: opensuse
+    - name: ArchLinux
       versions:
         - all
     - name: Debian
       versions:
         - all
-    - name: Ubuntu
+    - name: Fedora
       versions:
         - all
-    - name: ArchLinux
+    - name: Ubuntu
       versions:
         - all
 

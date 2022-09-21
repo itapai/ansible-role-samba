@@ -1,14 +1,25 @@
 ---
-- name: start netbootxyz docker container
+- name: Create netbootxyz docker container
   community.docker.docker_container:
+    state: started
+    container_default_behavior: no_defaults
     name: netbootxyz
     image: linuxserver/netbootxyz
-    state: present
     restart_policy: unless-stopped
+    env:
+      PUID: '{{ netbootxyz_user_id | string}}'
+      GUID: '{{ netbootxyz_group_id | string}}'
     ports:
       - 69:69/udp
       - 3000:3000
       - 8080:80
     volumes:
-      - /opt/netbootxyz/config:/config
-      - /opt/netbootxyz/assets:/assets
+      - '{{ netbootxyz_path }}/config:/config'
+      - '{{ netbootxyz_path }}/assets:/assets'
+
+- name: Copy netbootxyz boot.cfg
+  ansible.builtin.template:
+    src: templates/boot.cfg.j2
+    dest: "{{ netbootxyz_path }}/config/menus/boot.cfg"
+    mode: 0644
+

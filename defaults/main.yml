@@ -1,3 +1,4 @@
 ---
-netbootxyz_dir: /opt/netbootxyz
-netbootxyz_timezone: Europe/London
+netbootxyz_path: /opt/netbootxyz
+netbootxyz_user_id: 1000
+netbootxyz_group_id: 1000
