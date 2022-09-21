@@ -17,9 +17,8 @@
       - '{{ netbootxyz_path }}/config:/config'
       - '{{ netbootxyz_path }}/assets:/assets'
 
-- name: Copy netbootxyz boot.cfg
-  ansible.builtin.template:
-    src: templates/boot.cfg.j2
-    dest: "{{ netbootxyz_path }}/config/menus/boot.cfg"
-    mode: 0644
-
+# - name: Copy netbootxyz boot.cfg
+#   ansible.builtin.template:
+#     src: templates/boot.cfg.j2
+#     dest: "{{ netbootxyz_path }}/config/menus/boot.cfg"
+#     mode: 0644
