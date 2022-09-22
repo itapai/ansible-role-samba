@@ -1,12 +1,11 @@
-Ansible Role: Netbootxyz
+Ansible Role: Samba
 =========
 
-Ansible Role that installs [Netbootxyz](https://netboot.xyz/) using Docker.
+Ansible Role that installs [Samba](https://www.samba.org/) using Docker.
 
 Requirements
 ------------
 
-- git
 - docker
 
 Role Variables
@@ -26,7 +25,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - itapai.netbootxyz
+         - itapai.samba
 
 License
 -------

@@ -1,8 +1,8 @@
 ---
 galaxy_info:
   author: itapai
-  description: netbootxyz server
-  role_name: netbootxyz
+  description: samba server
+  role_name: samba
   standalone: true
 
   license: MIT
@@ -24,9 +24,9 @@ galaxy_info:
         - all
 
   galaxy_tags:
-    - netbootxyz
-    - netboot
-    - tftp
+    - samba
+    - filesystem
+    - netmount
 
 dependencies: []
 collections:
